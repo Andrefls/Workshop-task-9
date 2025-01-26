@@ -1,11 +1,26 @@
 let webcam;
 let ballSystem = [];
-let mirror;
+let mirror, mirror1;
+let dropdown;
+let selectedBg;
 
 function setup() {
+
   mirror = loadImage ("images/mirror.png");
+  mirror1 = loadImage ("images/mirror1.png");
+
+  // dropdown
+dropdown = createSelect();
+dropdown.option ('select')
+dropdown.option('mirror');
+dropdown.option('mirror1');
+dropdown.changed(BgSelectedEvent);
+dropdown.position (450,50);
+
   createCanvas(990, 540);
   pixelDensity (1);
+
+//webcam
   webcam = createCapture (VIDEO);
   webcam.size (990, 540);
   webcam.hide ();
@@ -18,18 +33,38 @@ function setup() {
 }
 
 function draw() {
+
+  
+
+  //ballsystem
+
   for (x = 0; x < ballSystem.length; x++){
     ballSystem[x].move ();
     ballSystem[x].show ();
     ballSystem[x].checkEdges();
-    background (mirror, [255]);
-  }
+  } 
+
+  switch (selectedBg){
+    case 'mirror':
+      background (mirror,[255]);
+      break;
+      case 'mirror1':
+        background (mirror1, [255]);
+        break;
+        }
+
 }
+
+
+function BgSelectedEvent () {
+  selectedBg = dropdown.value();
+}
+
 
 class Ball {
   constructor (x,y,r){
     this.x = x;
-    this.y = y
+    this.y = y;
     this.r =r;
   }
 
