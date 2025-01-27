@@ -1,4 +1,4 @@
- https://andrefls.github.io/Workshop-task-9/
+ Website Link : https://andrefls.github.io/Workshop-task-9/
 
 
 # In the end, you are the person in the mirror.
@@ -47,6 +47,9 @@
 - <img width="1659" alt="Screenshot 2025-01-26 at 6 00 04 pm" src="https://github.com/user-attachments/assets/94c9bf3d-9150-4ef9-a10d-310d50357e33" />
 
 - I wanted to add some interactivity, so I created a dropdown option for users. However, the setup didn’t work as intended, which led me to learn something new: how to set up an event to control the background settings. In the end, it worked out!
+
+- <img width="1494" alt="e" src="https://github.com/user-attachments/assets/854d887e-ecd7-412b-afd0-64ad04ea9cfd" />
+
 
   
 ## Future development
